@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECommerce Website</title>
-    <link href="../CSS/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../CSS/cart.css"/>
+    <link rel="stylesheet" href="../CSS/style.css"/>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-    
+    <script src="../JS/cartpage.js"></script>
+    <script src="../JS/homepage.js"></script>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <a href="" >Shopping cart</a>
-            <i class='bx bxs-cart' ></i>
-            
+    <header class="header">
+        <div>
+            <a href="#" class="logo" >Shopping cart</a>
+            <div><i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i></div>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="../HTML/Home.html">Home</a></li>
+                <li><a href="../HTML/Cart.html">Cart-details</a></li>
+            </ul>
         </nav>
-        <br>
-        
     </header>
     <!-- Shopping section -->
     <section>
@@ -35,21 +40,18 @@
                     Material: Canvas Net Quantity (N): 1 Sizes: Free Size Country of Origin: India
                 </p>
                 <span>₹900.00</span>
-                
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('School bag', 'Material: Canvas Net Quantity (N): 1 Sizes: Free Size Country of Origin: India', '₹900.00', '../Images/School Bag.jpg')">Add to Cart</button>
             </div>
             <div class="column">
                 <img src="../Images/bag1.jpeg" alt="Image not found"/>
                 <h4>School Bag <i class="bx bx-shopping-bag"></i></h4>
-                
                 <p style="font-size: small">
                     Material: Canvas Net Quantity (N): 1 Sizes: Free Size Country of Origin: India
                 </p>
                 <span>₹1200.00</span>
-                
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('School Bag', 'Material: Canvas Net Quantity (N): 1 Sizes: Free Size Country of Origin: India', '₹1200.00', '../Images/bag1.jpeg')">Add to Cart</button>
             </div>
             <div class="column">
                 <img src="../Images/hat2.jpg" alt="Image not found"/>
@@ -60,8 +62,8 @@
                     Easy 14 days returns and exchanges
                 </p>
                 <span>₹200.00</span>
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('Hat', '100% Original Products Pay on delivery might be available Easy 14 days returns and exchanges', '₹200.00', '../Images/hat2.jpg')">Add to Cart</button>
             </div>
             <div class="column">
                 <img src="../Images/note book.jpg" alt="Image not found"/>
@@ -72,9 +74,8 @@
                     Easy 14 days returns and exchanges
                 </p>
                 <span>₹399.00</span>
-
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('Note Book', '100% Original Products Pay on delivery might be available Easy 14 days returns and exchanges', '₹399.00', '../Images/note book.jpg')">Add to Cart</button>
             </div>
         </div>
         <div class="row">
@@ -88,9 +89,8 @@
                     Easy 14 days returns and exchanges
                 </p>
                 <span>₹350.00</span>
-                
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('You Can', '100% Original Products Pay on delivery might be available Easy 14 days returns and exchanges', '₹350.00', '../Images/You Can.jpg')">Add to Cart</button>
             </div>
             <div class="column">
                 <img src="../Images/T Shirt.jpg" alt="Image not found"/>
@@ -101,9 +101,8 @@
                     Easy 14 days returns and exchanges
                 </p>
                 <span>₹400.00</span>
-                
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('T-Shirt', '100% Original Products Pay on delivery might be available Easy 14 days returns and exchanges', '₹400.00', '../Images/T Shirt.jpg')">Add to Cart</button>
             </div>
             <div class="column">
                 <img src="../Images/T Shirts.webp" alt="Image not found"/>
@@ -114,9 +113,8 @@
                     Easy 14 days returns and exchanges
                 </p>
                 <span>₹799.00</span>
-                
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('T Shirts', '100% Original Products Pay on delivery might be available Easy 14 days returns and exchanges', '₹799.00', '../Images/T Shirts.webp')">Add to Cart</button>
             </div>
             <div class="column">
                 <img src="../Images/Jeans.webp" alt="Image not found"/>
@@ -127,10 +125,13 @@
                     Easy 14 days returns and exchanges
                 </p>
                 <span>₹800.00</span>
-            </br>
-            <button type="button" class="button">Add to Cart</button>
+                <br>
+                <button type="button" class="button" onclick="addToCart('Jeans', '100% Original Products Pay on delivery might be available Easy 14 days returns and exchanges', '₹800.00', '../Images/Jeans.webp')">Add to Cart</button>
             </div>
         </div>
+        
     </section>
+
+    <script src="../JS/cartpage.js"></script>
 </body>
 </html>

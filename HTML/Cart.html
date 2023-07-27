@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Cart</title>
+    <link rel="stylesheet" href="..\css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../JS/cartpage.js" defer></script>
+    <style>
+        .item-image {
+            max-width: 100px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <nav>
+            <img src="..\images\cart logo.jpg" height="40px" alt="Cart Logo">
+            <a href="home.html">Shopping Cart</a>
+            <i class="bx bx-shopping-bag" onclick="goToCart()"></i>
+        </nav>
+    </header>
+
+    
+    <section class="cart-section">
+        <div class="cart-heading">
+            <h2>Your Cart</h2>
+        </div>
+        <div id="cart-items" class="cart-items">
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">0</span></p>
+        </div>
+        <div class="cart-actions">
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+            <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+        </div>
+    </section>
+    <button class="back-button" onclick="goBack()">&larr; </button>
+</body>
+</html>
